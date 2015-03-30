@@ -2,19 +2,17 @@
 /**
  * An easy wrapper for sorting a multi-dimensional array.
  *
- * @param array $arr
- * @param array $sort_by  Accepts standard sorting constants:
- *                        SORT_ASC, SORT_DESC, SORT_REGULAR,
- *                        SORT_NUMERIC, SORT_STRING
+ * @author Eric Christenson (EricChristenson.com)
+ * @copyright 2015
+ * @version 1.1
+ * @license MIT Public License (http://opensource.org/licenses/MIT)
  *
- * @example
- * $arr = array();
- * $arr[] = array('name' => 'John', age => '32', 'housebroken' => '0');
- * $arr[] = array('name' => 'Don', age => '42', 'housebroken' => '1');
- *
- * $sort_by = array('name', SORT_ASC, 'age', SORT_ASC, SORT_NUMERIC);
- *
- * multisort($arr, $sort_by);
+ * @param   array $arr
+ * @param   array  $sort_by  ['key_name', constant (, 'key_name2', constant, ...)]
+ *                           Accepts standard sorting constants:
+ *                           SORT_ASC, SORT_DESC, SORT_REGULAR,
+ *                           SORT_NUMERIC, SORT_STRING
+ * @return  array $arr
  */
 function multisort(array &$arr, $sort_by) {
     $args = array();
